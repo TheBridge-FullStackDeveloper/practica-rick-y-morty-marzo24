@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Characters</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item" id="home-nav">
+              <a class="nav-link active" href="#">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item" id="create-nav">
+              <a class="nav-link" href="#">Create Character
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="home">
+      <div>
+        <ul class="pagination pagination-lg">
+          <li class="page-item" id="prevPage">
+            <a class="page-link" href="#">&laquo;</a>
+          </li>
+
+          <li class="page-item" id="nextPage">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+      <div
+        id="characters"
+        class="d-flex flex-wrap gap-3 justify-content-center"
+      ></div>
+    </div>
+
+    <div class="form-view d-none">
+      <!-- "name": "Arthricia", -->
+      <!-- "status": "Alive",
+        "gender": "Female",
+        "image": -->
+        <form class="container">
+        <h1>Form</h1>
+        <div>
+          <label for="input-name" class="form-label mt-4">Name</label>
+          <input type="text" class="form-control" id="input-name" placeholder="Enter name">
+        </div>
+        <div>
+          <label for="input-status" class="form-label mt-4">Status (dead or alive)</label>
+          <input type="text" class="form-control" id="input-status" placeholder="Enter status">
+        </div>
+        <div>
+          <label for="input-gender" class="form-label mt-4">Gender</label>
+          <input type="text" class="form-control" id="input-gender" placeholder="Enter gender">
+        </div>
+        <div>
+          <label for="input-image" class="form-label mt-4">Image</label>
+          <input type="text" class="form-control" id="input-image" placeholder="Enter Image">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3" id="btn">Create character</button>
+
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
